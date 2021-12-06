@@ -1,12 +1,6 @@
 ﻿internal class Fibonacci
 {
-    public int sequence { get; set; }
-    public Fibonacci(int s)
-    {
-        sequence = s;
-    }
-
-    public int FibonacciWithRecursive(int s)
+    public long FibonacciWithRecursive(int s)
     {
         if ((s == 0) || (s == 1))
         {
@@ -18,7 +12,7 @@
         }
     }
 
-    public int FibonacciWithLoop(int s)
+    public long FibonacciWithLoop(int s)
     {
         int a = 0, b = 1, c = 0;
         for (int i = 2; i < s; i++)
