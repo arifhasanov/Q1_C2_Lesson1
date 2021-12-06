@@ -1,57 +1,46 @@
-﻿Console.WriteLine("Welcome to Lesson 1. Which subtask do you want to run?");
-Console.WriteLine("1. Finding prime number");
-Console.WriteLine("2. Finding asymptotic complexity of the given code");
-Console.WriteLine("3. Calculating Fibonacci");
+﻿Console.WriteLine("Welcome to my Homework program");
 
-string choice = Console.ReadLine();
-
-if (choice == "1")
+bool continueSoftware = true;
+while(continueSoftware)
 {
-    Console.WriteLine("WELCOME TO TASK #1: Finding the prime number");
-    Console.Write("To see if the number is prime or not please enter a number: ");
+    Console.WriteLine("Please select the Lesson number. Then you will be asked to select the subtask number. If you want to exit, enter 'exit'");
+    Console.WriteLine();
+    Console.WriteLine("1. Lesson 1 - Block schemes, Asymptotic complexity, Recursions");
+    //Console.WriteLine("2. Lesson 2 - Block schemes, Asymptotic complexity, Recursions");
+    //Console.WriteLine("3. Lesson 3 - Block schemes, Asymptotic complexity, Recursions");
+    //Console.WriteLine("4. Lesson 4 - Block schemes, Asymptotic complexity, Recursions");
+    //Console.WriteLine("5. Lesson 5 - Block schemes, Asymptotic complexity, Recursions");
+    Console.WriteLine();
+    Console.Write("Lesson number: ");
+    string lessonNumber = Console.ReadLine();
 
-    int number = int.Parse(Console.ReadLine().ToString());
-    PrimeNumberFinder pm = new PrimeNumberFinder();
-
-    Console.WriteLine($"You have entered a {pm.PrimeOrNot(number)} number");
-}
-else if (choice == "2")
-{
-    Console.WriteLine("WELCOME TO TASK #2: Finding asymptotic complexity of the given code");
-    Console.WriteLine("Asymptotic complexity (Big O Notation) for the following code is written per each line:");
-
-    TaskTwo t = new TaskTwo();
-    Console.WriteLine(t.code);
-}
-else if (choice == "3")
-{
-    Console.WriteLine("WELCOME TO TASK #3: Calculating Fibonacci");
-    Console.Write("To see the fibonacci result please enter a number of squence: ");
-
-    int sequence = int.Parse(Console.ReadLine().ToString());
-    Fibonacci fb = new Fibonacci(sequence);
-
-    Console.WriteLine("Which method do you want to use to calculate the fibonacci?");
-    Console.WriteLine("1. Using recursive method");
-    Console.WriteLine("2. Using loop method");
-    Console.Write("Choice: ");
-
-    string method = Console.ReadLine().ToString();
-
-    if (method == "1")
+    switch (lessonNumber)
     {
-        Console.WriteLine($"Fibonacci sequence looks like this: {fb.FibonacciWithRecursive(sequence - 1)}");
+        case "1": Lesson1 l = new Lesson1();
+            break;
+        //case "2":
+        //    Lesson2 l = new Lesson2();
+        //    break;
+        //case "3":
+        //    Lesson3 l = new Lesson3();
+        //    break;
+        //case "4":
+        //    Lesson4 l = new Lesson4();
+        //    break;
+        //case "5":
+        //    Lesson5 l = new Lesson5();
+        //    break;
+        case "exit": continueSoftware = false;
+            break;
+        default: 
+            Console.WriteLine("You have entered incorrect lesson number. Please either enter lesson number, either enter 'exit' to exit.");
+            Console.WriteLine("Now press ENTER to continue...");
+            Console.ReadLine();
+            break;
     }
-    else if (method == "2")
-    {
-        Console.WriteLine($"Fibonacci sequence looks like this: {fb.FibonacciWithLoop(sequence)}");
-    }
-    else
-    {
-        Console.WriteLine("Wrong choice. Please choose 1 or 2");
-    }
+    Console.WriteLine("To continue press ENTER...");
+    Console.ReadLine();
+    Console.Clear();
 }
-else
-{
-    Console.WriteLine("You have selected incorrect subtask number");
-}
+
+

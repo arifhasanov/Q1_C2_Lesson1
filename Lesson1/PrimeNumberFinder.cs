@@ -5,7 +5,7 @@
 
     }
 
-    public string PrimeOrNot(int number)
+    public bool PrimeOrNot(int number)
     {
         int d = 0;
         int i = 2;
@@ -19,7 +19,6 @@
             i++;
         }
 
-        string result = d == 0 ? "prime" : "non-prime";
-        return result;
+        return d == 0;
     }
 }
