@@ -1,6 +1,6 @@
-﻿internal class PrimeNumberFinder
+﻿internal class Lesson1_1
 {
-    public PrimeNumberFinder()
+    public Lesson1_1()
     {
 
     }

@@ -6,7 +6,7 @@ while(continueSoftware)
     Console.WriteLine("Please select the Lesson number. Then you will be asked to select the subtask number. If you want to exit, enter 'exit'");
     Console.WriteLine();
     Console.WriteLine("1. Lesson 1 - Block schemes, Asymptotic complexity, Recursions");
-    //Console.WriteLine("2. Lesson 2 - Block schemes, Asymptotic complexity, Recursions");
+    Console.WriteLine("2. Lesson 2 - Massives, Lists, Search");
     //Console.WriteLine("3. Lesson 3 - Block schemes, Asymptotic complexity, Recursions");
     //Console.WriteLine("4. Lesson 4 - Block schemes, Asymptotic complexity, Recursions");
     //Console.WriteLine("5. Lesson 5 - Block schemes, Asymptotic complexity, Recursions");
@@ -16,19 +16,20 @@ while(continueSoftware)
 
     switch (lessonNumber)
     {
-        case "1": Lesson1 l = new Lesson1();
+        case "1": 
+            Lesson1 l1 = new Lesson1();
             break;
-        //case "2":
-        //    Lesson2 l = new Lesson2();
-        //    break;
+        case "2":
+            Lesson2 l2 = new Lesson2();
+            break;
         //case "3":
-        //    Lesson3 l = new Lesson3();
+        //    Lesson3 l3 = new Lesson3();
         //    break;
         //case "4":
-        //    Lesson4 l = new Lesson4();
+        //    Lesson4 l4 = new Lesson4();
         //    break;
         //case "5":
-        //    Lesson5 l = new Lesson5();
+        //    Lesson5 l5 = new Lesson5();
         //    break;
         case "exit": continueSoftware = false;
             break;

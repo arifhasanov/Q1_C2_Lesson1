@@ -1,4 +1,4 @@
-﻿internal class Fibonacci
+﻿internal class Lesson1_3
 {
     public long FibonacciWithRecursive(int s)
     {
