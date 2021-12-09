@@ -1,9 +1,9 @@
 ﻿class LinkedList : IEnumerable<Node>, ILinkedList
 {
     private Node head;
-    public Node First { get; set; }
-
     private Node tail;
+
+    public Node First { get; set; }
     public Node Last { get; set; }
     public int Length { get; private set; }
 
@@ -48,10 +48,10 @@
 
     public int GetCount()
     {
-        throw new NotImplementedException();
+        return Length;
     }
 
-    public void AddNode(int data)
+    public void AddNodeToEnd(int data) //Adding node to end
     {
         Node newNode = new Node(data);
         if (tail == null)
@@ -67,19 +67,68 @@
         Length++;
     }
 
+    public void AddNodeToBeginning(int data) //Adding node to front
+    {
+        Node newNode = new Node(data);
+        newNode.NextNode = head;
+
+        if (head == null)
+        {
+            tail = newNode;
+        }
+        else
+        {
+            head.PrevNode = newNode;
+        }
+        head = newNode;
+        Length++;
+    }
+
     public void AddNodeAfter(Node node, int value)
     {
-        throw new NotImplementedException();
+        Node newNode = new Node(value);
+        newNode.NextNode = node.NextNode;
+        node.NextNode.PrevNode = newNode;
+        node.NextNode = newNode;
+        Length++;
     }
 
     public void RemoveNode(int index)
     {
-        throw new NotImplementedException();
+        Node current = head;
+        while (current != null)
+        {
+            if (current.Value == index)
+            {
+                if(current.NextNode == null) //end of the list
+                {
+                    tail = current.PrevNode; //removing last item in the list
+                }
+                else
+                {
+                    current.NextNode.PrevNode = current.PrevNode; //tie nodes together
+                }
+
+                if (current.PrevNode == null) //start of the list
+                {
+                    head = current.NextNode; //removing first item in the list
+                }
+                else
+                {
+                    current.PrevNode.NextNode = current.NextNode; //tie nodes together
+                }
+
+                RemoveNode(current);
+                Length--;
+                return;
+            }
+            current = current.NextNode;
+        }
     }
 
     public void RemoveNode(Node node)
     {
-        throw new NotImplementedException();
+        node = null;
     }
 
     public void PrintList()
@@ -88,7 +137,7 @@
         Node current = head;
         while (current != null)
         {
-            list += $"|{current.Value}|-> ";
+            list += $"<-|{current.Value}|-> ";
             current = current.NextNode;
         }
 
