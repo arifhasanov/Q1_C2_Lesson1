@@ -15,7 +15,7 @@
             Console.Write("To see if the number is prime or not please enter a number: ");
 
             int number = int.Parse(Console.ReadLine().ToString());
-            PrimeNumberFinder pm = new PrimeNumberFinder();
+            Lesson1_1 pm = new Lesson1_1();
 
             string result = pm.PrimeOrNot(number) == true ? "prime" : "non-prime";
 
@@ -26,7 +26,7 @@
             Console.WriteLine("WELCOME TO TASK #2: Finding asymptotic complexity of the given code");
             Console.WriteLine("Asymptotic complexity (Big O Notation) for the following code is written per each line:");
 
-            TaskTwo t = new TaskTwo();
+            Lesson1_2 t = new Lesson1_2();
             Console.WriteLine(t.code);
         }
         else if (choice == "3")
@@ -35,7 +35,7 @@
             Console.Write("To see the fibonacci result please enter a number of squence: ");
 
             int sequence = int.Parse(Console.ReadLine().ToString());
-            Fibonacci fb = new Fibonacci();
+            Lesson1_3 fb = new Lesson1_3();
 
             Console.WriteLine("Which method do you want to use to calculate the fibonacci?");
             Console.WriteLine("1. Using recursive method");

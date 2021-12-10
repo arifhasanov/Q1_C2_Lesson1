@@ -1,4 +1,4 @@
-﻿internal class TaskTwo
+﻿internal class Lesson1_2
 {
     public string code = @"
 public static int  StrangeSum(int[] inputArray)
@@ -25,7 +25,7 @@ public static int  StrangeSum(int[] inputArray)
    return sum; // O(1)
 }
 ";
-    public TaskTwo()
+    public Lesson1_2()
     {
 
     }
