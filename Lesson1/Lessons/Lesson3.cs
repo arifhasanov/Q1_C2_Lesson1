@@ -14,13 +14,9 @@
         Console.WriteLine("Do you want to run Benchmark? Y/N?");
         if(Console.ReadLine() == "Y")
         {
-            Console.WriteLine("Here are the benchmark results for both methods: ");
+            Console.WriteLine("Here are the benchmark results for both methods:  ");
             var result1 = BenchmarkRunner.Run<Lesson3HelpingMethods>();
             Console.WriteLine("--------------------------------------------------------");
         }
     }
-
-
-	
-
 }
