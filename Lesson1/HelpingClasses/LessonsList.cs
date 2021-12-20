@@ -6,7 +6,7 @@
         LessonsListArray.Add("1. Lesson 1 - Block schemes, Asymptotic complexity, Recursions");
         LessonsListArray.Add("2. Lesson 2 - Massives, Lists, Search");
         LessonsListArray.Add("3. Lesson 3 - Class, Structures, Distances");
-        LessonsListArray.Add("4. Lesson 4 - Trees, hash tables");
+        LessonsListArray.Add("4. Lesson 4 - Binary search tree");
     }
 
     public void ShowWelcomeAndList()
