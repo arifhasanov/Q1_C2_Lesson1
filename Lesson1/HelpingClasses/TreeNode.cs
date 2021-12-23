@@ -92,6 +92,32 @@
         }
     }
 
+    public void BreadthFirstSearch()
+    {
+        if (leftNode != null)
+        {
+            leftNode.BreadthFirstSearch();
+        }
+
+        Console.Write($"{data} ");
+
+        if (rightNode != null)
+        {
+            rightNode.BreadthFirstSearch();
+        }
+    }
+
+    public void DepthFirstSearch()
+    {
+        Console.Write($"{data} ");
+
+        if (leftNode != null)
+            leftNode.DepthFirstSearch();
+
+        if (rightNode != null)
+            rightNode.DepthFirstSearch();
+    }
+
     public TreeNode Find(int value)
     {
         TreeNode currentNode = this;

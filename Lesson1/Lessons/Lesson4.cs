@@ -1,21 +1,11 @@
 ﻿class Lesson4
 {
     public static List<TreeNode> binaryTreeList = new List<TreeNode>();
-    BinaryTree binaryTree = new BinaryTree();
+    public BinaryTree binaryTree = new BinaryTree();
     public void Example()
     {
-        Console.WriteLine("Welcome to Lesson 4-1, here we will examine the Binary Search Tree");
+        Console.WriteLine("Welcome to Lesson 4, here we will examine the Binary Search Tree");
         Console.WriteLine("--------------------------------------------------------");
-        Console.WriteLine("Lets insert some numbers into the tree:");
-        binaryTree = new BinaryTree();
-
-        binaryTree.Insert(5);
-        binaryTree.Insert(3);
-        binaryTree.Insert(7);
-        binaryTree.Insert(2);
-        binaryTree.Insert(4);
-        binaryTree.Insert(6);
-        binaryTree.Insert(8);
 
         Console.WriteLine("--------------------------------------------------------");
         Console.WriteLine();
@@ -38,6 +28,20 @@
         binaryTree.BuildTree();
         OrderList(binaryTree.Height());
         printTree();
+    }
+
+    public void FillTree()
+    {
+        Console.WriteLine("Lets insert some numbers into the tree:");
+        binaryTree = new BinaryTree();
+
+        binaryTree.Insert(5);
+        binaryTree.Insert(3);
+        binaryTree.Insert(7);
+        binaryTree.Insert(2);
+        binaryTree.Insert(4);
+        binaryTree.Insert(6);
+        binaryTree.Insert(8);
     }
 
     private void printTree()
