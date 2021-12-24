@@ -160,6 +160,22 @@
         }
     }
 
+    public void BreadthFirstSearch()
+    {
+        if (root != null)
+        {
+            root.BreadthFirstSearch();
+        }
+    }
+
+    public void DepthFirstSearch()
+    {
+        if (root != null)
+        {
+            root.DepthFirstSearch();
+        }
+    }
+
     public TreeNode Find(int data)
     {
         if (root != null)
