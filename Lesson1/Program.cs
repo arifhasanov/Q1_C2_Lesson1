@@ -25,6 +25,10 @@ while(continueSoftware)
             Lesson5 l5 = new Lesson5();
             l5.Example();
             break;
+        case "6":
+            Lesson6 l6 = new Lesson6();
+            l6.Example();
+            break;
         case "exit": continueSoftware = false;
             break;
         default: 
