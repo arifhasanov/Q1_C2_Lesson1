@@ -8,6 +8,7 @@
         LessonsListArray.Add("3. Lesson 3 - Class, Structures, Distances");
         LessonsListArray.Add("4. Lesson 4 - Binary search tree");
         LessonsListArray.Add("5. Lesson 5 - Binary search tree, Width search and Depth search");
+        LessonsListArray.Add("6. Lesson 6 - Graphs, Width search and Depth search");
     }
 
     public void ShowWelcomeAndList()
